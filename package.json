@@ -1,0 +1,15 @@
+{
+  "name": "manoeuvre-infra",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Manoeuvre Infra multi-page company website",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
