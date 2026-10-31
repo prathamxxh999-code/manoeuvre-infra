@@ -75,3 +75,19 @@ root, because asset and page links start with `/`.
 The `dist` folder is already built and can be uploaded directly. This portable
 export excludes Git history and the original hosting account configuration.
 It does not require a GitHub connection or the original hosting account to run.
+
+### Vercel deployment
+
+The root `vercel.json` sets the build command to `npm run build` and the output
+directory to `dist`, using the Other framework preset.
+
+For the existing `manoeuvre-infra` Vercel project, connect the Git repository
+`prathamxxh999-code/manoeuvre-infra`, use the repository root as the Root Directory,
+and use `main` as the production branch. Deploy the latest commit from that branch
+to update `https://manoeuvre-infra.vercel.app`. Redeploying an older deployment
+without selecting the latest source can preserve the older project figures.
+
+The corrected Leaf project figures are **18 acres** and **7.5 lakh sq ft**.
+Confirm them on `/projects` after production deployment.
+
+Configuration reference: https://vercel.com/docs/project-configuration/vercel-json

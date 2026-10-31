@@ -1,7 +1,7 @@
 {
   "source_revision": "bc9441cfc9ce438fca7eb7a77e135f27a44bd273",
   "files": {
-    ".gitignore": "f552638a963311b1b6c564f1021bea821c7efa268314d22cd662bcff9ec6a4ba",
+    ".gitignore": "766935b412636d5e120a701f50d7c13b23a9f3348f932718a1ad50681ca3b770",
     "build.mjs": "af866e92cd3c2338e8b8c3d43bdba9077b2655b9e8f2c8edc97641a6d8216f28",
     "dist/about/index.html": "1d5288dc4e0869a38038b638986a67aeba1f34e03f91b267bdb435220bc0c7d0",
     "dist/app.js": "3da9567b47cfac0b755619a23bd4516e1f21aa348e85f3e1c8339596ff42c937",
@@ -108,7 +108,7 @@
     "dist/vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
     "dist/vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
     "package.json": "ce43c1cafdff7b75f8c4396c9449a1fa991f9b9e20ae4c952696124e0cd81381",
-    "README.md": "a1103554258e1690195cdd4adf43f0cd1fd30e5ce1603421935b898af44498c9",
+    "README.md": "a8933c5f2b1d52f8d15bd377ed2630a54de56ace0552d588cb4f45a0c8cae75d",
     "scripts/serve.mjs": "bf5c4162d07d68bf81807a8f27e9b4a6d4c2efae895b823f7c72aac244387e3e",
     "src/app.js": "2e1b8319aa70af888106b5a781830a36b41ed3796745295358c7b9fb6e2b1f4d",
     "src/data.mjs": "af3aa04095bb2a8969712e691c63e6be9ed85b1ea33eea8d641fac91778216d7",
@@ -116,6 +116,7 @@
     "src/styles.css": "384e801817c1247c6fe01282acc2dd8106b3ba98641560f80a4789640c840fd5",
     "src/templates.mjs": "4c6600a071e1d56c54a9dc243430ab31712daa4a0ad29d11439ed9b35135af45",
     "src/v2.css": "e240a4e3c32349358a423bf622784069f870914c34673befb650a724c0e787df",
-    "src/v2.js": "3da9567b47cfac0b755619a23bd4516e1f21aa348e85f3e1c8339596ff42c937"
+    "src/v2.js": "3da9567b47cfac0b755619a23bd4516e1f21aa348e85f3e1c8339596ff42c937",
+    "vercel.json": "7ee8a63db4ed2b310f50f9ec09d947e1cbdf1235c05aa79ca459061ee3989af8"
   }
 }
