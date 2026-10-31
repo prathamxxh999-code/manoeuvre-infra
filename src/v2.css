@@ -203,11 +203,11 @@ body{font-size:18px}
 .record-card:hover{transform:translateY(-7px);box-shadow:inset 0 1px 0 #fff,0 4px 0 #c3d9e9,0 20px 40px #0b203817;border-color:#82adcb}
 .record-card-top{align-items:center;min-height:96px;gap:12px}
 .record-card-top>span:first-child{background:linear-gradient(135deg,#0a2b4a,#176c99);color:#fff;border:1px solid #237daa;font-size:20px;font-weight:800;letter-spacing:-.025em;padding:12px 16px;border-radius:12px;box-shadow:inset 0 1px 0 #ffffff30,0 5px 0 #07243b,0 12px 18px #0a38511a;white-space:nowrap}
-.record-illustration{display:block;position:relative;width:102px;height:96px;flex-shrink:0}
-.record-illustration svg{display:block;width:100%;height:100%;filter:drop-shadow(0 7px 5px #0b203811)}
-.record-illustration>span{position:absolute;right:0;top:0;font-size:12px;color:#547992;letter-spacing:.08em}
+
+
+
 .record-card h2{margin-top:20px}.record-scale dd{color:#125e89}
-@media(max-width:600px){.record-card-top>span:first-child{font-size:21px}.record-illustration{width:105px;height:98px}}
+@media(max-width:600px){.record-card-top>span:first-child{font-size:21px}}
 
 /* Images meet the card edges; portrait and landscape assets get tailored framing. */
 .bento-grid .poster-visual{padding:0;background:#dce8f1}
@@ -242,11 +242,11 @@ body{font-size:18px}
 
 /* Consistent surfaces and realistic brand imagery. */
 .record-card,.record-card:nth-child(3n+2){background:linear-gradient(140deg,#fff 15%,#edf4f9 100%);border-bottom-color:#a8c4d8}
-.record-illustration{width:132px;height:112px}.record-illustration img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 7px #0b20380d)}
+
 .about-image.brand-art{padding:0;height:660px;border-radius:20px;position:relative;background:#d6e4f0}.about-image.brand-art img{object-fit:cover;filter:none;border-radius:0}.brand-art figcaption{left:0;right:0;bottom:0;padding:75px 30px 28px;background:linear-gradient(transparent,#061b31dd);color:white}.brand-art figcaption span{color:#d1e4f5}.brand-art figcaption strong{font-size:24px;color:white}
 .process-visual{padding:0;border-radius:20px;height:630px}.process-visual img{object-fit:cover;filter:none;border-radius:0}.process-visual>span{left:0;right:0;bottom:0;background:linear-gradient(transparent,#061b31dd);color:white;padding:70px 28px 28px;font-size:14px}.process-visual small{display:block;font-size:12px;letter-spacing:.03em;margin-top:7px;color:#d7e6f3}
 .bento-grid .is-concept .poster-image-label{display:block;top:16px;bottom:auto;left:16px;z-index:2;background:#061b31c9;color:white;padding:7px 10px;border-radius:6px;font-size:11px}
-@media(max-width:600px){.about-image.brand-art{height:510px}.process-visual{height:490px}.record-illustration{width:130px;height:110px}}
+@media(max-width:600px){.about-image.brand-art{height:510px}.process-visual{height:490px}}
 
 /* Safety: a people-led, cinematic page. */
 .safety-hero{position:relative;min-height:760px;height:100svh;max-height:1100px;background:#071b32;overflow:hidden;color:white}
@@ -278,25 +278,20 @@ body{font-size:18px}
 @media(max-width:700px){.safety-hero{height:920px;min-height:0;max-height:none}.safety-hero-image{object-position:69% top;height:620px}.safety-hero-shade{background:linear-gradient(0deg,#071b32 20%,#071b32da 43%,transparent 75%)}.safety-hero-content{min-height:0;height:100%;padding-top:440px;padding-bottom:85px;justify-content:flex-end}.safety-hero-content h1{font-size:clamp(50px,9.8vw,70px);margin:22px 0}.safety-hero-content p{font-size:17px;margin-bottom:24px}.safety-hero-bottom{bottom:22px;font-size:10px;letter-spacing:.04em;gap:16px}.safety-hero-bottom>span:last-child{max-width:145px;text-align:right}.safety-promise-grid{grid-template-columns:1fr;gap:35px}.safety-promise-copy h2{font-size:48px}.safety-promise-copy p{font-size:17px}.safety-people-visual{height:530px;max-width:440px;width:100%;margin:auto}.safety-feature-grid{grid-template-columns:1fr;gap:22px}.safety-feature{padding:28px}.safety-feature-top{margin-bottom:30px}.safety-feature h3{font-size:29px}.safety-routine-grid{grid-template-columns:1fr;gap:25px}.safety-routine-grid h3{margin-top:18px}.safety-routine-grid p{max-width:100%}.safety-record-note{grid-template-columns:1fr;gap:17px}.safety-promise{padding-bottom:78px}}
 
 
-/* Larger architectural models occupy the right edge of every record tile. */
-.record-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-.record-card{min-height:400px;padding:32px;overflow:hidden;isolation:isolate}
-.record-card-top{min-height:58px;position:relative;z-index:2;align-items:flex-start}
-.record-card-top .record-index{background:none;box-shadow:none;border:0;padding:5px 0;color:#64839b;font-size:13px;font-weight:500;letter-spacing:.08em}
-.record-illustration{position:absolute;right:-68px;bottom:-25px;width:330px;height:355px;z-index:0;pointer-events:none}
-.record-illustration img{width:100%;height:100%;object-fit:contain;object-position:right bottom;filter:drop-shadow(0 15px 10px #0b203818)}
-.record-card h2,.record-card dl{position:relative;z-index:1;max-width:60%}
-.record-card h2{font-size:28px;line-height:1.15;margin:26px 0 30px;overflow-wrap:normal}
-.record-card dl{margin-bottom:0}.record-card dd{font-size:17px}.record-card .record-scale{margin-top:22px;padding-top:20px}.record-card .record-scale dd{font-size:23px}
-@media(min-width:1500px){.record-illustration{width:380px;height:380px;right:-55px}}
-@media(max-width:1100px){.record-card{padding:28px;min-height:420px}.record-illustration{width:290px;height:330px;right:-95px;bottom:-15px}.record-card h2,.record-card dl{max-width:67%}.record-card h2{font-size:26px}}
-@media(max-width:700px){.record-grid{grid-template-columns:1fr}.record-card{padding:27px;min-height:390px}.record-illustration{width:310px;height:340px;right:-80px;bottom:-18px}.record-card h2,.record-card dl{max-width:62%}.record-card h2{font-size:26px;margin-top:27px}.record-card dd{font-size:16px}.record-card .record-scale dd{font-size:21px}}
-@media(max-width:380px){.record-illustration{width:280px;right:-90px}.record-card h2,.record-card dl{max-width:67%}.record-card h2{font-size:24px}}
-
-/* Reserve a clear reading area beside large models on narrow cards. */
-@media(max-width:1100px) and (min-width:701px){.record-illustration{right:-128px;width:280px}.record-card h2,.record-card dl{max-width:64%}}
-@media(max-width:700px){.record-illustration{right:-132px;width:280px;height:335px}.record-card h2,.record-card dl{max-width:63%}.record-card dd{overflow-wrap:anywhere}.record-card h2{overflow-wrap:anywhere}}
-@media(max-width:380px){.record-illustration{right:-145px}.record-card h2,.record-card dl{max-width:66%}}
+/* Track-record cards: full-width content, shared rows and even gutters. */
+.record-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+.record-card{min-width:0;min-height:0;padding:30px 32px;display:grid;grid-template-rows:auto minmax(70px,auto) 1fr;gap:24px;overflow:hidden}
+.record-card-top{min-height:0;align-items:center;gap:16px}
+.record-card-top .record-index{background:none;box-shadow:none;border:0;padding:0;color:#64839b;font-size:14px;font-weight:500;letter-spacing:.06em}
+.record-card h2{max-width:100%;margin:0;font-size:30px;line-height:1.2;overflow-wrap:break-word;align-self:start}
+.record-card dl{max-width:100%;margin:0;display:grid;grid-template-rows:1fr auto;gap:22px}
+.record-card dt{font-size:15px;line-height:1.5;margin:0 0 7px}
+.record-card dd{font-size:18px;line-height:1.5;overflow-wrap:break-word}
+.record-card .record-scale{margin:0;padding-top:20px;border-top:1px solid #cfdde8}
+.record-card .record-scale dd{font-size:23px;line-height:1.3;color:#125e89}
+@supports(grid-template-rows:subgrid){.record-card{grid-row:span 4;grid-template-rows:subgrid}.record-card dl{display:contents}}
+@media(max-width:1100px){.record-card{padding:26px;gap:22px}.record-card h2{font-size:27px}}
+@media(max-width:700px){.record-grid{grid-template-columns:1fr;gap:22px}.record-card{padding:25px;gap:22px}.record-card h2{font-size:27px}.record-card dd{font-size:17px}.record-card .record-scale dd{font-size:22px}}
 
 /* Image-led introductions carry the navy identity across interior pages. */
 .subpage-hero{position:relative;min-height:700px;overflow:hidden;isolation:isolate;background:#071b32;color:#fff}
@@ -464,3 +459,49 @@ body{font-size:18px}
 @media(max-width:1100px){.more-work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.more-work-grid{grid-template-columns:1fr;gap:24px}.more-work-grid .accomplished-caption h3{font-size:26px}}
 
+
+/* Responsive refinements shared by every page. */
+.header-contact{white-space:nowrap;flex-shrink:0}
+.header .brand{min-height:44px}
+.button>i{flex-shrink:0}
+.project-company-logos{gap:clamp(12px,2vw,24px)}
+.company-logo-aman{width:min(136px,50%)}
+.company-logo-developer{width:min(96px,34%);height:auto;aspect-ratio:1}
+.enquiry-panel input,.enquiry-panel textarea,.enquiry-panel select{font-size:16px;min-height:48px}
+.enquiry-panel,.contact-info,.form-row>label,.project-card-data dl>div{min-width:0}
+@media(max-width:900px){
+  .menu-toggle{width:44px;min-width:44px;height:44px;flex:0 0 44px;align-items:center}
+  .mobile-menu{height:100dvh;overflow-y:auto;overscroll-behavior:contain;padding:100px 6% max(28px,env(safe-area-inset-bottom));gap:28px;justify-content:flex-start}
+  .mobile-menu nav{flex:none}.mobile-menu>a{margin-top:auto;overflow-wrap:anywhere;min-height:44px;display:flex;align-items:center}
+  .mobile-menu nav>a{min-height:54px;padding:12px 0}
+  .filter,.copy-email,.footer-links a{min-height:44px}
+  .footer-links a{display:flex;align-items:center}
+}
+@media(max-width:700px){
+  .subpage-hero h1,.subpage-hero-brand h1,.subpage-hero-contact h1,.safety-hero-content h1{font-size:clamp(34px,9.5vw,58px);max-width:100%}
+  .subpage-hero,.safety-hero,.subpage-hero-content,.safety-hero-content{min-height:760px}
+  .subpage-hero-content,.safety-hero-content{padding-top:300px;padding-bottom:48px}
+  .safety-hero-content{padding-bottom:96px}
+  .subpage-hero-content>.button,.safety-hero-content>.button{max-width:100%;gap:20px}
+  .safety-people-visual{height:auto;aspect-ratio:4/5;max-height:530px}
+  .safety-people-tag{left:12px;right:12px;padding:16px 18px;letter-spacing:.08em}
+  .safety-people-tag strong{font-size:18px}
+}
+@media(max-width:600px){
+  .header{gap:8px;padding:0 10px 0 14px}.header-contact{min-height:44px;padding:8px 10px;gap:8px}
+  .hero-scroll{height:auto}.hero-stage{position:relative;height:100svh;min-height:760px}
+  .hero-copy .label{font-size:11px;letter-spacing:.1em}.hero-copy h1{font-size:clamp(34px,10.8vw,65px)}
+  .section-title h2{font-size:clamp(32px,8.5vw,44px);line-height:1.05}
+  .about-image.brand-art{height:auto;aspect-ratio:4/5}.brand-art figcaption{padding:65px 22px 24px}.brand-art figcaption strong{font-size:21px}
+  .process-visual{height:auto;aspect-ratio:4/5}.process-visual>span{padding:55px 22px 24px}
+  .leader-portrait{margin:0}.leader-bio h3{font-size:clamp(36px,10vw,52px)}
+  .project-card-data dl,.portfolio-grid .project-card-data dl{gap:18px 16px}
+  .project-card-data dt,.project-card-scope>span{font-size:14px}
+  .filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.filter{width:100%;padding:11px 12px}
+  .project-search input{font-size:16px;min-height:48px}
+  .future-content h2{font-size:clamp(36px,10.5vw,54px)}
+  .footer-links{gap:4px 20px}.footer-contact>a{padding-block:6px}
+}
+@media(max-width:380px){.header-contact{display:none}.menu-toggle{margin-left:auto}.record-card{padding:22px}.record-card h2{font-size:25px}.record-card-top>span:first-child{font-size:19px;padding:10px 14px}}
+@media(max-width:900px) and (max-height:500px){.mobile-menu{padding-top:90px}.mobile-menu nav>a{font-size:25px;min-height:48px;padding:9px 0}}
+@media(hover:none){.record-card:hover,.safety-feature:hover{transform:none}}

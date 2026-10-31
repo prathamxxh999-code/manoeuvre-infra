@@ -17,6 +17,7 @@ function setMenu(open){
   menu?.setAttribute('aria-expanded',String(open));
   menu?.setAttribute('aria-label',open?'Close menu':'Open menu');
   if(mobileMenu)mobileMenu.inert=!open;
+  document.querySelectorAll('main,footer,.header .brand,.header-contact').forEach(el=>el.inert=open);
   if(open)mobileMenu.querySelector('a')?.focus();
 }
 menu?.addEventListener('click',()=>setMenu(!document.body.classList.contains('menu-open')));
@@ -45,7 +46,7 @@ function updateScroll(){
   if(progress){const max=document.documentElement.scrollHeight-vh;progress.style.width=`${max>0?clamp(scrollY/max)*100:0}%`;}
   if(reduced)return;
   if(hero){
-    const rect=hero.getBoundingClientRect();const p=clamp(-rect.top/(hero.offsetHeight-vh));
+    const rect=hero.getBoundingClientRect();const p=clamp(-rect.top/Math.max(hero.offsetHeight-vh,vh*.5,1));
     heroCopy.style.transform=`translateY(${-p*80}px)`;heroCopy.style.opacity=String(1-p*.5);
     heroBottom.style.transform=`translateY(${-p*30}px)`;
     window.dispatchEvent(new CustomEvent('site:hero-progress',{detail:p}));

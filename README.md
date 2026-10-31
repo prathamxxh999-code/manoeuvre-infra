@@ -1,7 +1,7 @@
 # Manoeuvre Infra — website source
 
-Complete source export of the published website, dated 30 October 2026.
-Source revision: bc9441cfc9ce438fca7eb7a77e135f27a44bd273.
+Complete source for the Manoeuvre Infra website. Last updated 31 October 2026.
+Source revision: 1cea2bebce06585cf23ca41b92903ae4a3984e3f.
 
 ## Run locally
 

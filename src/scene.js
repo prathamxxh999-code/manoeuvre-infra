@@ -39,7 +39,8 @@ if(host&&canvas){
     scene.add(ambient);
     const key=new THREE.DirectionalLight(0xffffff,3.5);
     key.position.set(-3,8,5);key.castShadow=true;
-    key.shadow.mapSize.set(2048,2048);
+    const shadowSize=matchMedia('(max-width:700px)').matches?1024:2048;
+    key.shadow.mapSize.set(shadowSize,shadowSize);
     key.shadow.camera.left=-6;key.shadow.camera.right=6;key.shadow.camera.top=8;key.shadow.camera.bottom=-5;
     key.shadow.normalBias=.025;key.shadow.bias=-.0001;key.shadow.radius=5;
     scene.add(key);
@@ -174,11 +175,14 @@ if(host&&canvas){
     sculpture.position.y=.34;
     const ground=new THREE.Mesh(new THREE.PlaneGeometry(40,40),new THREE.ShadowMaterial({opacity:.12,color:0x233e57}));
     ground.rotation.x=-Math.PI/2;ground.position.y=-.12;ground.receiveShadow=true;scene.add(ground);
-    let progress=0,smoothProgress=0,visible=true,running=false;
+    let progress=0,smoothProgress=0,visible=true,running=false,lastFrame=0,frameInterval=1000/60;
     const clock=new THREE.Clock();
     function resize(){
       const {width,height}=host.getBoundingClientRect();if(!width||!height)return;
-      sceneWidth=width;sceneHeight=height;renderer.setSize(width,height,false);
+      sceneWidth=width;sceneHeight=height;
+      frameInterval=1000/(width<=700?30:60);
+      renderer.setPixelRatio(Math.min(devicePixelRatio,width<=700?1.25:1.6));
+      renderer.setSize(width,height,false);
       const frame=width<=600?{left:.08,top:.34,width:.97,height:.52}:width<=900?{left:.41,top:.18,width:.69,height:.8}:{left:.555,top:.03,width:.5,height:.9};
       logoViewport={x:width*frame.left,y:height*(1-frame.top-frame.height),width:width*frame.width,height:height*frame.height};
       camera.aspect=logoViewport.width/logoViewport.height;camera.position.set(5.2,3.8,camera.aspect<.9?11.4:10.6);camera.lookAt(0,2.15,0);camera.updateProjectionMatrix();
@@ -199,7 +203,7 @@ if(host&&canvas){
       renderer.render(scene,camera);
       renderer.setScissorTest(false);
     }
-    function animate(){if(!visible||document.hidden){running=false;return;}render();requestAnimationFrame(animate);}
+    function animate(now){if(!visible||document.hidden){running=false;return;}if(now-lastFrame>=frameInterval){render();lastFrame=now;}requestAnimationFrame(animate);}
     function start(){if(running||reduced)return;running=true;requestAnimationFrame(animate);}
     window.addEventListener('site:hero-progress',ev=>{progress=ev.detail;if(reduced)render();});
     const observer=new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;if(visible)start();},{rootMargin:'100px'});observer.observe(host);
